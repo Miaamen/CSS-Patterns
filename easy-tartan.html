@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红桌布</title>
+    <link href="https://fonts.font.im/css?family=Amatic+SC" rel="stylesheet">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-image: linear-gradient(rgba(255, 0, 0, 0.2),20px,transparent 0),
+                              linear-gradient(90deg,rgba(255, 0, 0, 0.2),20px,transparent 0);
+            background-size: 40px 40px;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+           
+        }
+
+        div{
+            position: relative;
+            font-family: 'Amatic SC', cursive;
+            font-weight: 900;
+            padding: 0 0.12em 0 0;
+            font-size: 8em;
+            color: #be676f;
+        }
+
+        div::after{
+            content: attr(data-name);
+            position: absolute;
+            top: 0.06em;
+            left: 0.12em;
+            color: #c67175;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div data-name="Hello Mia">Hello Mia</div>
+</body>
+</html>

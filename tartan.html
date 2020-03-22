@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多彩桌布</title>
+    <link href="https://fonts.font.im/css?family=Amatic+SC" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, #69aac363 10%, #feffa996 0, #feffa996 35%, #99999987 0, #99999987 65% , #feffa996 0, #feffa996 70%, #69aac363 0, #69aac363 95% , #99999987 0),
+                        linear-gradient(#69aac363 10%, #feffa996 0, #feffa996 35%, #99999987 0, #99999987 65% , #feffa996 0, #feffa996 70%, #69aac363 0, #69aac363 95% , #99999987 0);
+            background-size: 200px 100px;
+        }body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+           
+        }
+
+        div{
+            position: relative;
+            font-family: 'Amatic SC', cursive;
+            font-weight: 900;
+            padding: 0 0.12em 0 0;
+            font-size: 8em;
+            color: #8b88c7;
+        }
+
+        div::after{
+            content: attr(data-name);
+            position: absolute;
+            top: 0.06em;
+            left: 0.12em;
+            color: #a793d7;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div data-name="Hello Mia">Hello Mia</div>
+</body>
+</html>

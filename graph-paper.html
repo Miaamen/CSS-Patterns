@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方格纸</title>
+    <link href="https://fonts.font.im/css?family=Amatic+SC" rel="stylesheet">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            /*横着1px，然后剩下都是tranprarent*/
+            /*竖着1px，然后剩下都是tranprarent*/
+            background-image: linear-gradient(#a0a0a0 1px, transparent 0),
+                              linear-gradient(90deg, #a0a0a0 1px, transparent 0);
+            /*上面的设置在20px和20px的小方格里实现，然后默认repeat*/
+            background-size: 20px 20px;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+           
+        }
+        div{
+            position: relative;
+            font-family: 'Amatic SC', cursive;
+            font-weight: 900;
+            padding: 0 0.12em 0 0;
+            font-size: 8em;
+            color: #6776be;
+        }
+
+        div::after{
+            content: attr(data-name);
+            position: absolute;
+            top: 0.06em;
+            left: 0.12em;
+            color: #9084d0;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div data-name="Hello Mia">Hello Mia</div>
+</body>
+</html>
